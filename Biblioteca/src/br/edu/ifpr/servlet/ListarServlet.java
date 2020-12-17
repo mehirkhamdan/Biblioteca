@@ -24,20 +24,11 @@ public class ListarServlet  extends HttpServlet{
 	public void init() throws ServletException {
 		
 		Livro livro1 = new Livro();
-		livro1.setNome("Dom Quixote");
-		livro1.getAutor().setAutorNome("Miguel de Cervantes");
+		livro1.setNome("Harry Potter");
+		livro1.getAutor().setAutorNome("J.K Rowling");
 		repositorio.cadastrar(livro1);
 		
-		Livro livro2 = new Livro();
-		livro2.setNome("O Conde de Monte Cristo");
-		livro2.getAutor().setAutorNome("Alexandre Dumas");
-		repositorio.cadastrar(livro2);
-		
-		Livro livro3 = new Livro();
-		livro3.setNome("Cabeça de Vaca");
-		livro3.getAutor().setAutorNome("Paulo Markum");
-		repositorio.cadastrar(livro3);
-		
+				
 	}
 	
 	@Override
