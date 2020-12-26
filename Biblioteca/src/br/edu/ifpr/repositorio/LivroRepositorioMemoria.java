@@ -39,13 +39,17 @@ public Livro buscarPorId(String id) throws IllegalArgumentException {
 			
 			throw new IllegalArgumentException("O nome da livro nao pode ter menos que 3 caracteres");
 			
-		}
+		}//else if(livro.getAutor().getAutorNome() == null || livro.getAutor().getAutorNome().isEmpty()) {
+			
+		//	throw new IllegalArgumentException("O nome do Autor nao pode ser vazio");
+	//	}
 		
 		livros.add(livro);
 		
 		
 		return livro;
 	}
+	
 
 	@Override
 	public void alterarStatus(String id, String status) throws IllegalArgumentException {

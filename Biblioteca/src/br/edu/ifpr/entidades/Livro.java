@@ -14,7 +14,7 @@ public class Livro {
 		this.id = UUID.randomUUID().toString();
 		this.dataCadastro = new Date();
 		this.status = StatusLivro.DISPONIVEL;
-		this.autor = new Autor();
+	    this.autor = new Autor();
 	}
 	
 	

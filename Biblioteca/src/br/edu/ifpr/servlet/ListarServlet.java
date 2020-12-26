@@ -28,13 +28,18 @@ public class ListarServlet  extends HttpServlet{
 		livro1.getAutor().setAutorNome("J.K Rowling");
 		repositorio.cadastrar(livro1);
 		
+		Livro livro2 = new Livro();
+		livro2.setNome("Uma Terra Prometida");
+		livro2.getAutor().setAutorNome("Barak Obama");
+		repositorio.cadastrar(livro2);
+		
 				
 	}
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.setAttribute("livroLivros", repositorio.buscarTodos());
+		req.setAttribute("listaLivros", repositorio.buscarTodos());
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
 		dispatcher.forward(req, resp);
 	}
